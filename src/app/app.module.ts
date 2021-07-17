@@ -8,12 +8,16 @@ import { HttpClientModule } from '@angular/common/http';
 //Components
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
+import { ComicsComponent } from './components/comics/comics.component';
+import { ComicCardComponent } from './components/comic-card/comic-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
+    ComicsComponent,
+    ComicCardComponent
   ],
   imports: [
     BrowserModule,

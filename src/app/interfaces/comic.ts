@@ -1,137 +1,69 @@
 export interface Comic{
-  "code": "int",
-  "status": "string",
-  "copyright": "string",
-  "attributionText": "string",
-  "attributionHTML": "string",
-  "data": {
-    "offset": "int",
-    "limit": "int",
-    "total": "int",
-    "count": "int",
-    "results": [
-      {
-        "id": "int",
-        "digitalId": "int",
-        "title": "string",
-        "issueNumber": "double",
-        "variantDescription": "string",
-        "description": "string",
-        "modified": "Date",
-        "isbn": "string",
-        "upc": "string",
-        "diamondCode": "string",
-        "ean": "string",
-        "issn": "string",
-        "format": "string",
-        "pageCount": "int",
-        "textObjects": [
-          {
-            "type": "string",
-            "language": "string",
-            "text": "string"
-          }
-        ],
-        "resourceURI": "string",
-        "urls": [
-          {
-            "type": "string",
-            "url": "string"
-          }
-        ],
-        "series": {
-          "resourceURI": "string",
-          "name": "string"
-        },
-        "variants": [
-          {
-            "resourceURI": "string",
-            "name": "string"
-          }
-        ],
-        "collections": [
-          {
-            "resourceURI": "string",
-            "name": "string"
-          }
-        ],
-        "collectedIssues": [
-          {
-            "resourceURI": "string",
-            "name": "string"
-          }
-        ],
-        "dates": [
-          {
-            "type": "string",
-            "date": "Date"
-          }
-        ],
-        "prices": [
-          {
-            "type": "string",
-            "price": "float"
-          }
-        ],
-        "thumbnail": {
-          "path": "string",
-          "extension": "string"
-        },
-        "images": [
-          {
-            "path": "string",
-            "extension": "string"
-          }
-        ],
-        "creators": {
-          "available": "int",
-          "returned": "int",
-          "collectionURI": "string",
-          "items": [
-            {
-              "resourceURI": "string",
-              "name": "string",
-              "role": "string"
-            }
-          ]
-        },
-        "characters": {
-          "available": "int",
-          "returned": "int",
-          "collectionURI": "string",
-          "items": [
-            {
-              "resourceURI": "string",
-              "name": "string",
-              "role": "string"
-            }
-          ]
-        },
-        "stories": {
-          "available": "int",
-          "returned": "int",
-          "collectionURI": "string",
-          "items": [
-            {
-              "resourceURI": "string",
-              "name": "string",
-              "type": "string"
-            }
-          ]
-        },
-        "events": {
-          "available": "int",
-          "returned": "int",
-          "collectionURI": "string",
-          "items": [
-            {
-              "resourceURI": "string",
-              "name": "string"
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "etag": "string"
+  id: number;
+  title: string;
+  description: string;
+  variantDescription: string;
+  format: string;
+  resourceURI: string;
+  pageCount: number;
+  issueNumber: number;
+  characters: {
+    available: number;
+    items: Character[];
+  }
+  thumbnail: {
+    extension: string;
+    path: string;
+  }
+  creators: {
+    avaiable: number;
+    collectionUri: string;
+    items: Creator[];
+  }
+  dates: Date[];
+
+  events: {
+    avaiable: number;
+    collectionUri: string;
+    items: Event[];
+  }
+
+  series: {
+    name: string;
+  resourceURI: string;
+  }
+  stories: {
+    avaiable: number;
+    collectionUri: string;
+    items : Story [];
+  }
+
+}
+
+// Characters
+interface Character {
+  resourceUri: string;
+  name: string;
+}
+// Creators 
+interface Creator{
+  name: string;
+  roel: string
+}
+//Dates
+interface Date {
+  type: string;
+  date: string;
+}
+// Event
+interface Event {
+  type: string;
+  date: string;
+}
+
+// Stories
+interface Story {
+  type: string;
+  name: string;
+  resourceURI: string;
 }
