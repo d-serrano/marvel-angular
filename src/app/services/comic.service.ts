@@ -21,10 +21,15 @@ export class ComicService {
     const url = `${ baseUrl }/${ query }?${ params }`;
     return this.http.get( url );
   }
-  //https://gateway.marvel.com:443/v1/public/comics?apikey=bfdde0f3aedbb27fac12e79e43956136
+  // get a list of comics
    getComics(){
     return this.getQuery('v1/public/comics');
-    // return [ { code: 45, status: 'stirg' } ]
+   }
+  // get a unique comic by id
+  //https://gateway.marvel.com:443/v1/public/comics/9803?apikey=bfdde0f3aedbb27fac12e79e43956136
+  getComic(id: number) {
+     console.log( id )
+    return this.getQuery(`v1/public/comics/${ id }`);
   }
 
 }                                                                                      

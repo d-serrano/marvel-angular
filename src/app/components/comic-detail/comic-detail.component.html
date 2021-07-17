@@ -1,0 +1,28 @@
+<p>comic-detail works!</p>
+<h1> {{comic?.title}} </h1>
+<a href={}>
+  <img src={{comicThumbnail}} alt={{comicThumbnail}}>
+</a>
+<p>{{comic?.description}}</p>
+<p>{{comic?.format}}</p>
+
+<!-- creators -->
+<div *ngFor = "let creator of creatorsList">
+  <p>{{ creator.name }} : {{ creator.role }} </p>
+</div>
+<!-- characters -->
+<div *ngFor = "let character of charactersList">
+  <p>{{ character.name }}</p>
+</div>
+<!-- Dates -->
+<div *ngFor = "let date of datesList">
+  <p>{{ date.type }} : {{ date.date }}</p>
+</div>
+<!-- Events -->
+<div *ngFor = "let event of eventsList">
+  <p>{{ event.type }} : {{ event.date }}</p>
+</div>
+<!-- Stories -->
+<div *ngFor = "let story of storiesList">
+  <p>{{ story.name }} : {{ story.type }}</p>
+</div>

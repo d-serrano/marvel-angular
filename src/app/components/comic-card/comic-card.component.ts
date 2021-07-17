@@ -8,11 +8,13 @@ import { Comic } from 'src/app/interfaces/comic';
 })
 export class ComicCardComponent implements OnInit {
   @Input() comic: Comic | undefined;
-  comicThumbnail: string= '';
+  comicThumbnail: string = '';
+  comicUrl = `http://localhost:4200/comic/`
   constructor() { }
 
   ngOnInit(): void {
-    this.comicThumbnail = `${this.comic?.thumbnail.path}.${this.comic?.thumbnail.extension}`
+    this.comicThumbnail = `${this.comic?.thumbnail.path}.${this.comic?.thumbnail.extension}`;
+    this.comicUrl += this.comic?.id;
   }
   
 }

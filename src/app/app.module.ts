@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ComicsComponent } from './components/comics/comics.component';
 import { ComicCardComponent } from './components/comic-card/comic-card.component';
+import { ComicDetailComponent } from './components/comic-detail/comic-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ComicCardComponent } from './components/comic-card/comic-card.component
     HomeComponent,
     SearchComponent,
     ComicsComponent,
-    ComicCardComponent
+    ComicCardComponent,
+    ComicDetailComponent
   ],
   imports: [
     BrowserModule,

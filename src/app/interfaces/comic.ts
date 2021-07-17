@@ -1,3 +1,11 @@
+import {
+  Character,
+  Creator,
+  Date,
+  Event,
+  Story
+} from './general';
+
 export interface Comic{
   id: number;
   title: string;
@@ -20,17 +28,18 @@ export interface Comic{
     collectionUri: string;
     items: Creator[];
   }
-  dates: Date[];
+  dates: {
+    items: Date[];
+  };
 
   events: {
     avaiable: number;
     collectionUri: string;
     items: Event[];
   }
-
   series: {
     name: string;
-  resourceURI: string;
+    resourceURI: string;
   }
   stories: {
     avaiable: number;
@@ -40,30 +49,3 @@ export interface Comic{
 
 }
 
-// Characters
-interface Character {
-  resourceUri: string;
-  name: string;
-}
-// Creators 
-interface Creator{
-  name: string;
-  roel: string
-}
-//Dates
-interface Date {
-  type: string;
-  date: string;
-}
-// Event
-interface Event {
-  type: string;
-  date: string;
-}
-
-// Stories
-interface Story {
-  type: string;
-  name: string;
-  resourceURI: string;
-}
