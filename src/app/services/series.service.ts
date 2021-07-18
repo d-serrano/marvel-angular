@@ -1,16 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// 
+
 import { Md5 } from 'ts-md5'
 @Injectable({
   providedIn: 'root'
 })
-export class ComicService {
+export class SeriesService {
 
-  constructor( private http: HttpClient ) {
-    console.log('Marvel service listo');
-   }
-    
+  constructor( private http: HttpClient ) { }
+
   getQuery(query: string) {
     const baseUrl = 'https://gateway.marvel.com:443';
     const ts = Date.now();
@@ -21,15 +19,14 @@ export class ComicService {
     const url = `${ baseUrl }/${ query }?${ params }`;
     return this.http.get( url );
   }
-  // get a list of comics
-   getComics(){
-    return this.getQuery('v1/public/comics');
+
+   // get the list of series
+   getSeries(){
+    return this.getQuery('v1/public/series');
    }
   // get a unique comic by id
-  getComic(id: number) {
+  getSerie(id: number) {
      console.log( id )
-    return this.getQuery(`v1/public/comics/${ id }`);
+    return this.getQuery(`v1/public/series/${ id }`);
   }
-
-}                                                                                      
-                                          
+}
