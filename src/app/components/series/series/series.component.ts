@@ -13,8 +13,8 @@ export class SeriesComponent implements OnInit {
   series:       Serie[] = [];
   loading:      boolean = false;
   isError: boolean = false;
-  
-  constructor( private seriesService : SeriesService ) { }
+
+  constructor(private seriesService: SeriesService) { }
 
   ngOnInit(): void {
     this.getSeries()

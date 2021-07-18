@@ -1,3 +1,21 @@
-<div>
-  <h1>{{ serie?.title }}</h1>
+<div class="card__link" >
+  <img class="card__link__image" src={{serieThumbnail}} alt={{serieThumbnail}}>
 </div>
+<div class="card__body">
+  <h1 class="card__body__title"> {{serie?.title}} </h1>
+  <p class="card__body__description">{{(serie?.description | slice:0:150) || 'Not Description yet' }}</p>
+  <p class="card__body__format">{{serie?.type || "Unkown"}}</p>
+</div>
+
+
+
+<ng-template #content let-modal>
+  <app-series-modal [serie]= serie>  
+  </app-series-modal>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+
+<hr>
+
+<pre>{{ closeResult }}</pre>

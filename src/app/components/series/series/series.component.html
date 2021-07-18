@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="row cards-row">
+  <div class="cards-row row cards-row">
     <ng-container *ngFor = "let serie of series">
-      <app-comic-card class="card" [product] = serie></app-comic-card>
+      <app-serie-card class="card col-5" [serie] = serie></app-serie-card>
     </ng-container>
   </div>
 </div>

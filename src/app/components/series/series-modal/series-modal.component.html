@@ -1,1 +1,25 @@
-<p>series-modal works!</p>
+<h1> {{serie?.title}} </h1>
+  <!-- <img src={{serieThumbnail}} alt={{serieThumbnail}}> -->
+<p>{{serie?.description || 'Not description yet'}}</p>
+<p>{{serie?.format}}</p>
+
+<!-- creators -->
+<h4>{{creatorsList.length ? 'Creator : ' : null}}</h4>
+<ul *ngFor = "let creator of creatorsList">
+  <p>{{ creator.name }} : {{ creator.role }} </p>
+</ul>
+<!-- characters -->
+<h4>{{charactersList.length ? 'Characters : ' : null}}</h4>
+<ul *ngFor = "let character of charactersList">
+  <p>{{ character.name }}</p>
+</ul>
+<!-- Events -->
+<h4>{{eventsList.length ? 'Events : ' : null}}</h4>
+<ul *ngFor = "let event of eventsList">
+  <p>{{ event.type }} : {{ event.date }}</p>
+</ul>
+<!-- Stories -->
+<h4>{{storiesList.length ? 'Stories : ' : null}}</h4>
+<ul *ngFor = "let story of storiesList">
+  <p>{{ story.name }} : {{ story.type }}</p>
+</ul>
