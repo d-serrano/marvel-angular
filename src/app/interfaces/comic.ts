@@ -12,9 +12,12 @@ export interface Comic{
   description: string;
   variantDescription: string;
   format: string;
+  type: string;
   resourceURI: string;
   pageCount: number;
   issueNumber: number;
+  startYear: number;
+  endYear: number;
   characters: {
     available: number;
     items: Character[];

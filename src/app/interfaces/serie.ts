@@ -5,16 +5,18 @@ import {
   Event,
   Story
 } from './general';
-import { Comic } from './comic'
 export interface Serie {
   id: number;
   title: string;
   description: string;
   variantDescription: string;
   format: string;
+  type: string;
   resourceURI: string;
   pageCount: number;
   issueNumber: number;
+  startYear: number;
+  endYear: number;
   characters: {
     available: number;
     items: Character[];

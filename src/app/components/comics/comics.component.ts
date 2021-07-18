@@ -5,7 +5,8 @@ import { Comic } from '../../interfaces/comic';
 import { ComicService } from '../../services/comic.service';
 // material
 import {NgbPaginationConfig} from '@ng-bootstrap/ng-bootstrap';;
-
+// params route
+import { ActivatedRoute } from "@angular/router";
 @Component({
   selector: 'app-comics',
   templateUrl: './comics.component.html',
@@ -16,14 +17,16 @@ export class ComicsComponent implements OnInit {
   loading:      boolean = false;
   isError:      boolean = false;
   // MatPaginator Inputs
-   page = 4; 
+   page: number = 1; 
   constructor(private comicService: ComicService,
-                config: NgbPaginationConfig  ) {
+    private activatedRoute: ActivatedRoute,
+    config: NgbPaginationConfig  ) {
     // customize default values of paginations used by this component tree
+
     config.size = 'sm';
     config.boundaryLinks = true;
   }
-
+  
   ngOnInit(): void {
     this.getComics()
   }
@@ -38,5 +41,4 @@ export class ComicsComponent implements OnInit {
       console.log('serviceError : ', serrviceError);
     } ) );
   }
-
 }

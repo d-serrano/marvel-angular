@@ -1,0 +1,18 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60em;
+}
+.cards-row{
+  justify-content: space-around;
+  width: 100%
+}
+// .card{
+
+// }
+.ng-pagination{
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}

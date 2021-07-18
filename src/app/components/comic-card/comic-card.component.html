@@ -2,8 +2,8 @@
     <img class="card__link__image" src={{comicThumbnail}} alt={{comicThumbnail}}>
   </a>
   <div class="card__body">
-    <h1 class="card__body__title"> {{comic?.title}} </h1>
-    <p class="card__body__description">{{(comic?.description | slice:0:150) || 'Not Description yet' }}</p>
-    <p class="card__body__format">{{comic?.format || 'Unknow'}}</p>
+    <h1 class="card__body__title"> {{product?.title}} </h1>
+    <p class="card__body__description">{{(product?.description | slice:0:150) || 'Not Description yet' }}</p>
+    <p class="card__body__format">{{product?.type || product?.format || "Unkown"}}</p>
   </div>
   

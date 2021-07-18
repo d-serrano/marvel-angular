@@ -1,9 +1,7 @@
-
 <div class="container">
   <div class="row cards-row">
     <ng-container *ngFor = "let comic of comics">
-      <app-comic-card  class = 'card col-6' [comic] = comic></app-comic-card>
-
+      <app-comic-card  class = 'card col-6' [product] = comic></app-comic-card>
     </ng-container>
   </div>
   <ngb-pagination class="ng-pagination" [collectionSize]="70" [(page)]="page"></ngb-pagination>

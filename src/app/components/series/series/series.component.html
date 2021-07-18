@@ -1,5 +1,7 @@
-<p>series works!</p>
-
-<div *ngFor = "let serie of series">
-  <app-serie-card [serie] = serie></app-serie-card>
+<div class="container">
+  <div class="row cards-row">
+    <ng-container *ngFor = "let serie of series">
+      <app-comic-card class="card" [product] = serie></app-comic-card>
+    </ng-container>
+  </div>
 </div>

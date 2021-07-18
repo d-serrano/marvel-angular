@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Comic } from 'src/app/interfaces/comic';
+import { Serie } from 'src/app/interfaces/serie';
 // Enviroment
 import { environment } from '../../../environments/environment';
 @Component({
@@ -8,14 +9,14 @@ import { environment } from '../../../environments/environment';
   styleUrls: ['./comic-card.component.scss']
 })
 export class ComicCardComponent implements OnInit {
-  @Input() comic: Comic | undefined;
+  @Input() product: (Comic | Serie )| undefined;
   comicThumbnail: string = '';
-  comicUrl = `${environment.baseUrl}/comic/`
+  comicUrl = `${environment.baseUrl}/comic/`;
   constructor() { }
 
   ngOnInit(): void {
-    this.comicThumbnail = `${this.comic?.thumbnail.path}.${this.comic?.thumbnail.extension}`;
-    this.comicUrl += this.comic?.id;
+    this.comicThumbnail = `${this.product?.thumbnail.path}.${this.product?.thumbnail.extension}`;
+    this.comicUrl += this.product?.id;
+    
   }
-  
 }
