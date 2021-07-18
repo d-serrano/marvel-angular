@@ -6,8 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 //http 
 import { HttpClientModule } from '@angular/common/http';
 // material
-import { MatMenuModule } from '@angular/material/menu';
-import { MatButton } from '@angular/material/button';
+
+
 //Components
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
@@ -19,6 +19,7 @@ import { HeaderComponent } from './components/layaout/header/header.component';
 import { SeriesComponent } from './components/series/series/series.component';
 import { SeriesModalComponent } from './components/series/series-modal/series-modal.component';
 import { SerieCardComponent } from './components/series/serie-card/serie-card.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -37,8 +38,7 @@ import { SerieCardComponent } from './components/series/serie-card/serie-card.co
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule,
-    MatMenuModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

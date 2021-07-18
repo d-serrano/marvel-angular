@@ -1,5 +1,10 @@
-<p>comics works!!</p>
 
-<div *ngFor = "let comic of comics">
-  <app-comic-card [comic] = comic></app-comic-card>
+<div class="container">
+  <div class="row cards-row">
+    <ng-container *ngFor = "let comic of comics">
+      <app-comic-card  class = 'card col-6' [comic] = comic></app-comic-card>
+
+    </ng-container>
+  </div>
+  <ngb-pagination class="ng-pagination" [collectionSize]="70" [(page)]="page"></ngb-pagination>
 </div>

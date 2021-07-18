@@ -3,3 +3,28 @@ $primary: #171527 ;
 $secondary: #C32B27 ;
 $tertiary: #E9E8F3 ;
 $grey : #282828;
+
+// Bootstrap breakpoints
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-x-large: 1200px;
+// Responsive mixins 
+
+@mixin tablet {
+  @media only screen and (min-width: $breakpoint-medium) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $breakpoint-large) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: $breakpoint-x-large) {
+    @content;
+  }
+}

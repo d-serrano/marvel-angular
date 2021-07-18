@@ -1,9 +1,9 @@
-<p>comic-card works!</p>
-
-  <h1> {{comic?.title}} </h1>
-  <a href={{comicUrl}}>
-    <img src={{comicThumbnail}} alt={{comicThumbnail}}>
+  <a class="card__link" href={{comicUrl}}>
+    <img class="card__link__image" src={{comicThumbnail}} alt={{comicThumbnail}}>
   </a>
-  <p>{{comic?.description}}</p>
-  <p>{{comic?.format}}</p>
+  <div class="card__body">
+    <h1 class="card__body__title"> {{comic?.title}} </h1>
+    <p class="card__body__description">{{(comic?.description | slice:0:150) || 'Not Description yet' }}</p>
+    <p class="card__body__format">{{comic?.format || 'Unknow'}}</p>
+  </div>
   
