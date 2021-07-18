@@ -30,6 +30,5 @@ export class ComicService {
      console.log( id )
     return this.getQuery(`v1/public/comics/${ id }`);
   }
-
 }                                                                                      
                                           

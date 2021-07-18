@@ -10,7 +10,6 @@ import { SeriesService } from '../../../services/series.service';
   styleUrls: ['./series.component.scss']
 })
 export class SeriesComponent implements OnInit {
-  selectedComic: any ;
   series:       Serie[] = [];
   loading:      boolean = false;
   isError: boolean = false;
