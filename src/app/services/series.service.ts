@@ -7,7 +7,9 @@ import { Md5 } from 'ts-md5'
 })
 export class SeriesService {
 
-  constructor( private http: HttpClient ) { }
+  constructor(private http: HttpClient) {
+    console.log('Marvel service listo');
+  }
 
   getQuery(query: string) {
     const baseUrl = 'https://gateway.marvel.com:443';

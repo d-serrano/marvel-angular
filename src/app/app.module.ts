@@ -16,6 +16,9 @@ import { ComicCardComponent } from './components/comic-card/comic-card.component
 import { ComicDetailComponent } from './components/comic-detail/comic-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/layaout/header/header.component';
+import { SeriesComponent } from './components/series/series/series.component';
+import { SeriesModalComponent } from './components/series/series-modal/series-modal.component';
+import { SerieCardComponent } from './components/series/serie-card/serie-card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { HeaderComponent } from './components/layaout/header/header.component';
     ComicsComponent,
     ComicCardComponent,
     ComicDetailComponent,
-    HeaderComponent
+    HeaderComponent,
+    SeriesComponent,
+    SeriesModalComponent,
+    SerieCardComponent
   ],
   imports: [
     BrowserModule,

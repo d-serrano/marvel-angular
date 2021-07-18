@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+// interfaces
 import { Comic } from '../../interfaces/comic';
 //services
 import { ComicService } from '../../services/comic.service';
@@ -23,7 +24,6 @@ export class ComicsComponent implements OnInit {
     {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
   ];
   
-  selectedComic: any ;
   comics:       Comic[] = [];
   loading:      boolean = false;
   isError:      boolean = false;
@@ -32,7 +32,6 @@ export class ComicsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getComics()
-    console.log( 'Hola Home', this.comics )
   }
   getComics(): void {
     this.comicService.getComics().subscribe((result: any) => {

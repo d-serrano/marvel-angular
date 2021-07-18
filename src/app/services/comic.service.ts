@@ -9,7 +9,7 @@ export class ComicService {
 
   constructor( private http: HttpClient ) {
     console.log('Marvel service listo');
-   }
+  }
     
   getQuery(query: string) {
     const baseUrl = 'https://gateway.marvel.com:443';
