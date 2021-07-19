@@ -1,7 +1,12 @@
 <div class="container">
+  <h1>Series</h1>
+  <ngb-pagination class="ng-pagination" [collectionSize]="70" [(page)]="page"
+  (pageChange)='oNpageChange($event)'></ngb-pagination>
   <div class="cards-row row cards-row">
     <ng-container *ngFor = "let serie of series">
       <app-serie-card class="card col-5" [serie] = serie></app-serie-card>
     </ng-container>
   </div>
+  <ngb-pagination class="ng-pagination" [collectionSize]="70" [(page)]="page"
+  (pageChange)='oNpageChange($event)'></ngb-pagination>
 </div>

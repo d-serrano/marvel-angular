@@ -26,16 +26,19 @@ export class ComicService {
    getComics(){
     return this.getQuery('v1/public/comics');
    }
+  // get a list of comics with offset and limit based on page
+  getComicsPage( page : number, limit: number) {
+    let queryParams = `offset=${page * limit + 1}&limit=${limit}`;
+    return this.getQuery('v1/public/comics', queryParams);
+   }
   // get a unique comic by id
   getComic(id: number) {
      console.log( id )
     return this.getQuery(`v1/public/comics/${ id }`);
   }
   // get related Comics
-  //https://gateway.marvel.com:443/v1/public/comics?title=
   getRelatedComics(param: string, value: string ) {
-    return this.getQuery(`v1/public/comics`, `${ param }=${ value }`);
-    
+    return this.getQuery(`v1/public/comics`, `${ param }=${ value }`); 
   }
 }                                                                                      
                                           

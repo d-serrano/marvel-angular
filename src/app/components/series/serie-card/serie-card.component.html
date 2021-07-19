@@ -1,4 +1,4 @@
-<div class="card__link" >
+<div class="card__link" (click)="open(content)">
   <img class="card__link__image" src={{serieThumbnail}} alt={{serieThumbnail}}>
 </div>
 <div class="card__body">
@@ -13,8 +13,6 @@
   <app-series-modal [serie]= serie>  
   </app-series-modal>
 </ng-template>
-
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
 
 <hr>
 
