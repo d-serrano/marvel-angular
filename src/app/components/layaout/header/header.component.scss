@@ -5,5 +5,9 @@
   align-items: center;
   height: 6em;
   padding: 1em 2em 1em 2em;
-  background-color: $primary ;
+  background-color: $secondary ;
+  color : #fff !important ;
+  &__title{
+    color : #fff !important ;
+  }
 }

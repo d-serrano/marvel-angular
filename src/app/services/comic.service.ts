@@ -11,13 +11,14 @@ export class ComicService {
     console.log('Marvel service listo');
   }
     
-  getQuery(query: string) {
+  getQuery(query: string, queryParams?: string) {
     const baseUrl = 'https://gateway.marvel.com:443';
     const ts = Date.now();
     const publicKey = `bfdde0f3aedbb27fac12e79e43956136`;
     const privateKey = `fada2cea56782058efb9769b49550aa749cd069a`;
-    const hash =  Md5.hashStr( ts + privateKey + publicKey );
-    const params = `ts=${ ts }&apikey=${ publicKey }&hash=${ hash }`
+    const hash = Md5.hashStr(ts + privateKey + publicKey);
+    queryParams = !queryParams ? '' : queryParams;
+    const params = `ts=${ ts }&apikey=${ publicKey }&hash=${ hash }&${queryParams}`
     const url = `${ baseUrl }/${ query }?${ params }`;
     return this.http.get( url );
   }
@@ -29,6 +30,12 @@ export class ComicService {
   getComic(id: number) {
      console.log( id )
     return this.getQuery(`v1/public/comics/${ id }`);
+  }
+  // get related Comics
+  //https://gateway.marvel.com:443/v1/public/comics?title=
+  getRelatedComics(param: string, value: string ) {
+    return this.getQuery(`v1/public/comics`, `${ param }=${ value }`);
+    
   }
 }                                                                                      
                                           

@@ -28,7 +28,6 @@ export class SeriesService {
    }
   // get a unique comic by id
   getSerie(id: number) {
-     console.log( id )
     return this.getQuery(`v1/public/series/${ id }`);
   }
 }

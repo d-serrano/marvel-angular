@@ -9,6 +9,8 @@ import { environment } from '../../../../environments/environment';
 export class HeaderComponent implements OnInit {
   title = 'Marvel Comics - Angular'
   homeUrl = `${environment.baseUrl}/home/`
+  comicsUrl = `${environment.baseUrl}/comics/`
+  seriesUrl = `${environment.baseUrl}/series/`
   constructor() { }
 
   ngOnInit(): void {
