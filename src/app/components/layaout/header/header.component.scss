@@ -1,5 +1,5 @@
 @import '../../../../globals.scss';
-#header{
+.header{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -9,5 +9,17 @@
   color : #fff !important ;
   &__title{
     color : #fff !important ;
+    &:hover{
+      text-decoration: none
+    }
+  }
+  &__link{
+    color : #fff !important ;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+    border-bottom: 10px;
+    border-color: #fff;
+    &:hover{
+      text-decoration: none
+    }
   }
 }

@@ -1,20 +1,52 @@
+@import '../../../globals.scss';
 .home{
   display: flex;
-  justify-content: space-around;
-  padding: 1em 2em 2em 1em;
-  &__link{
-    width: 20rem; /* width of container */
-    margin: 1rem;
-    &__image{
-      width: 100%;
-      aspect-ratio: 9/10;
-      object-fit: cover;
-   
-      filter: brightness(10%);
-      &:hover{
-        filter: brightness(20%);
-      }
-
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__row{
+    width: 60rem;
+    justify-content: center;
+  }
+  &__text{
+    color: #fff;
+    background-color: $secondary;
+    text-align: center;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 0.2rem;
+  }
+  &__image{
+    &:hover{
+      text-decoration: none
     }
+  }
+}
+
+#comics-cont{
+  background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ),url('https://i.annihil.us/u/prod/marvel/i/mg/6/a0/60e5e1550f77e.jpg') no-repeat center center ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 4/5;
+  width: 20rem;
+  margin: 1rem;
+  border-radius: 0.2rem;
+  &:hover{
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url('https://i.annihil.us/u/prod/marvel/i/mg/6/a0/60e5e1550f77e.jpg') no-repeat center center ;
+  }
+}
+
+#series-cont{
+
+  background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ),url('https://i.annihil.us/u/prod/marvel/i/mg/1/40/5e558a8495066.jpg') no-repeat center center ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 4/5;
+  width: 20rem;
+  margin: 1rem;
+  border-radius: 0.2rem;
+  &:hover{
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url('https://i.annihil.us/u/prod/marvel/i/mg/1/40/5e558a8495066.jpg') no-repeat center center ;
   }
 }
